@@ -11,16 +11,20 @@
 		84FB3B4822380B8C0096900C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB3B4722380B8C0096900C /* ViewController.swift */; };
 		84FB3B4A22380B8D0096900C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FB3B4922380B8D0096900C /* Assets.xcassets */; };
 		84FB3B4D22380B8D0096900C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FB3B4B22380B8D0096900C /* Main.storyboard */; };
+		84FB3B56223907930096900C /* PrefsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB3B55223907930096900C /* PrefsViewController.swift */; };
+		84FB3B5F22391AF60096900C /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB3B5E22391AF60096900C /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		84FB3B4222380B8C0096900C /* OrthanServerAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrthanServerAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FB3B4222380B8C0096900C /* OrthancServerAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrthancServerAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB3B4522380B8C0096900C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FB3B4722380B8C0096900C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84FB3B4922380B8D0096900C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84FB3B4C22380B8D0096900C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84FB3B4E22380B8D0096900C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84FB3B4F22380B8D0096900C /* OrthanServerAdmin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrthanServerAdmin.entitlements; sourceTree = "<group>"; };
+		84FB3B55223907930096900C /* PrefsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsViewController.swift; sourceTree = "<group>"; };
+		84FB3B5E22391AF60096900C /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,7 @@
 		84FB3B4322380B8C0096900C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84FB3B4222380B8C0096900C /* OrthanServerAdmin.app */,
+				84FB3B4222380B8C0096900C /* OrthancServerAdmin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				84FB3B4522380B8C0096900C /* AppDelegate.swift */,
-				84FB3B4722380B8C0096900C /* ViewController.swift */,
+				84FB3B57223912990096900C /* View Controllers */,
+				84FB3B59223913410096900C /* Model */,
 				84FB3B4922380B8D0096900C /* Assets.xcassets */,
 				84FB3B4B22380B8D0096900C /* Main.storyboard */,
 				84FB3B4E22380B8D0096900C /* Info.plist */,
@@ -63,12 +68,29 @@
 			path = OrthanServerAdmin;
 			sourceTree = "<group>";
 		};
+		84FB3B57223912990096900C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84FB3B4722380B8C0096900C /* ViewController.swift */,
+				84FB3B55223907930096900C /* PrefsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		84FB3B59223913410096900C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84FB3B5E22391AF60096900C /* Preferences.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84FB3B4122380B8C0096900C /* OrthanServerAdmin */ = {
+		84FB3B4122380B8C0096900C /* OrthancServerAdmin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84FB3B5222380B8D0096900C /* Build configuration list for PBXNativeTarget "OrthanServerAdmin" */;
+			buildConfigurationList = 84FB3B5222380B8D0096900C /* Build configuration list for PBXNativeTarget "OrthancServerAdmin" */;
 			buildPhases = (
 				84FB3B3E22380B8C0096900C /* Sources */,
 				84FB3B3F22380B8C0096900C /* Frameworks */,
@@ -78,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = OrthanServerAdmin;
+			name = OrthancServerAdmin;
 			productName = OrthanServerAdmin;
-			productReference = 84FB3B4222380B8C0096900C /* OrthanServerAdmin.app */;
+			productReference = 84FB3B4222380B8C0096900C /* OrthancServerAdmin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,10 +117,18 @@
 				TargetAttributes = {
 					84FB3B4122380B8C0096900C = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 84FB3B3D22380B8C0096900C /* Build configuration list for PBXProject "OrthanServerAdmin" */;
+			buildConfigurationList = 84FB3B3D22380B8C0096900C /* Build configuration list for PBXProject "OrthancServerAdmin" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84FB3B4122380B8C0096900C /* OrthanServerAdmin */,
+				84FB3B4122380B8C0096900C /* OrthancServerAdmin */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FB3B4822380B8C0096900C /* ViewController.swift in Sources */,
+				84FB3B56223907930096900C /* PrefsViewController.swift in Sources */,
+				84FB3B5F22391AF60096900C /* Preferences.swift in Sources */,
 				84FB3B4622380B8C0096900C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -258,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -308,7 +340,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84FB3B3D22380B8C0096900C /* Build configuration list for PBXProject "OrthanServerAdmin" */ = {
+		84FB3B3D22380B8C0096900C /* Build configuration list for PBXProject "OrthancServerAdmin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84FB3B5022380B8D0096900C /* Debug */,
@@ -317,7 +349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84FB3B5222380B8D0096900C /* Build configuration list for PBXNativeTarget "OrthanServerAdmin" */ = {
+		84FB3B5222380B8D0096900C /* Build configuration list for PBXNativeTarget "OrthancServerAdmin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84FB3B5322380B8D0096900C /* Debug */,

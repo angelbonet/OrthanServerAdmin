@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -10,25 +12,29 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="OrthanServerAdmin" id="1Xt-HY-uBw">
+                            <menuItem title="OrthancServerAdmin" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="OrthanServerAdmin" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="OrthancServerAdmin" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About OrthanServerAdmin" id="5kV-Vb-QxS">
+                                        <menuItem title="About OrthancServerAdmin" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="DGS-V6-XAK" kind="show" id="ndL-EU-4MC"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide OrthanServerAdmin" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide OrthancServerAdmin" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -46,7 +52,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit OrthanServerAdmin" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit OrthancServerAdmin" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -618,7 +624,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -659,7 +665,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="OrthanServerAdmin Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="OrthancServerAdmin Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -673,7 +679,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="OrthancServerAdmin" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,11 +689,13 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Orthanc Server Admin" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="OrthancServerAdminMainWindow" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="200"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="480" height="200"/>
+                        <value key="maxSize" type="size" width="480" height="200"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -698,20 +706,138 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="377"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="OrthancServerAdmin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="211"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U1o-Lp-Oba">
+                                <rect key="frame" x="73" y="137" width="113" height="32"/>
+                                <buttonCell key="cell" type="push" title="Start Server" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AJY-aO-oBn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="startServer:" target="XfG-lQ-9wD" id="jn6-qf-WKl"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r6G-rq-gfY">
+                                <rect key="frame" x="294" y="137" width="112" height="32"/>
+                                <buttonCell key="cell" type="push" title="Stop Server" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kW7-U9-hRL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="stopServer:" target="XfG-lQ-9wD" id="Gcw-0a-mEq"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoK-DE-fB6">
+                                <rect key="frame" x="18" y="68" width="444" height="29"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="JHA-I8-MWM">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-Tk-Qd5">
+                                <rect key="frame" x="224" y="139" width="32" height="32"/>
+                            </progressIndicator>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P23-vO-ld3">
+                                <rect key="frame" x="20" y="20" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSActionTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="1MW-d6-X9H">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="DGS-V6-XAK" kind="show" id="c08-Uq-tP6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="U1o-Lp-Oba" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="46" id="3L4-eg-vBc"/>
+                            <constraint firstItem="VoK-DE-fB6" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="TEp-yn-9Q5"/>
+                            <constraint firstItem="r6G-rq-gfY" firstAttribute="leading" secondItem="8EG-Tk-Qd5" secondAttribute="trailing" constant="44" id="W9a-ab-u5d"/>
+                            <constraint firstItem="8EG-Tk-Qd5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="XfY-iA-akT"/>
+                            <constraint firstItem="8EG-Tk-Qd5" firstAttribute="leading" secondItem="U1o-Lp-Oba" secondAttribute="trailing" constant="44" id="a7U-7L-eEI"/>
+                            <constraint firstItem="U1o-Lp-Oba" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="79" id="bWm-gZ-6eC"/>
+                            <constraint firstItem="r6G-rq-gfY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="46" id="f4e-KX-QEd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="VoK-DE-fB6" id="75P-ml-jQe"/>
+                        <outlet property="sayProgress" destination="8EG-Tk-Qd5" id="XlM-1N-FSn"/>
+                        <outlet property="startServerButton" destination="U1o-Lp-Oba" id="b4y-0Z-FLE"/>
+                        <outlet property="stopServerButton" destination="r6G-rq-gfY" id="YIJ-If-35b"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="774.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="Ian-T4-LEI">
+            <objects>
+                <windowController id="DGS-V6-XAK" sceneMemberID="viewController">
+                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="3x7-Lq-DwM">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="340" height="180"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="DGS-V6-XAK" id="xVL-vW-MRF"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="uik-bm-tqS" kind="relationship" relationship="window.shadowedContentViewController" id="E7f-0D-2gh"/>
+                    </connections>
+                </windowController>
+                <customObject id="fRn-a8-i2k" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="384"/>
+        </scene>
+        <!--Prefs View Controller-->
+        <scene sceneID="FPM-rv-DID">
+            <objects>
+                <viewController id="uik-bm-tqS" customClass="PrefsViewController" customModule="OrthancServerAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="saj-1i-khp">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="180"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ObS-2z-pdZ">
+                                <rect key="frame" x="58" y="88" width="225" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Arrancar server automaticamente" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Zrd-Nq-tDl">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <binding destination="rBY-h6-4bB" name="value" keyPath="values.startPrefCheck" id="ySM-ib-X8G"/>
+                                    </connections>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="autoStartServerCheck:" target="uik-bm-tqS" id="15z-OZ-3Ha"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="autoStartServer" destination="Zrd-Nq-tDl" id="Wkm-GY-dZ1"/>
+                    </connections>
+                </viewController>
+                <customObject id="DQa-Lk-JLC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="rBY-h6-4bB"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="759"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="c08-Uq-tP6"/>
+    </inferredMetricsTieBreakers>
 </document>
