@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8434AB5B226F1CA000FEC87A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84FB3B4222380B8C0096900C /* OrthancServerAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrthancServerAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB3B4522380B8C0096900C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FB3B4722380B8C0096900C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		84FB3B3922380B8C0096900C = {
 			isa = PBXGroup;
 			children = (
+				8434AB5B226F1CA000FEC87A /* README.md */,
 				84FB3B4422380B8C0096900C /* OrthanServerAdmin */,
 				84FB3B4322380B8C0096900C /* Products */,
 			);
