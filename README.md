@@ -20,3 +20,12 @@ At this moment only start and stop Orthanc Server without use of terminal, but t
 - Edit configuration JSON file through preferences.
 - Open log from app button.
 - Detect Orthanc server status without errors.
+
+## Thanks and other information
+
+More information about Orthanc Server at:
+
+https://www.orthanc-server.com
+
+Four tutorials in Medium publications about Orthanc Server in Mac OS with PostgreSQL server. In spanish at this moment...
+
