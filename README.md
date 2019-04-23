@@ -29,3 +29,4 @@ https://www.orthanc-server.com
 
 Four tutorials in Medium publications about Orthanc Server in Mac OS with PostgreSQL server. In spanish at this moment...
 
+https://medium.com/@angel.bonet
